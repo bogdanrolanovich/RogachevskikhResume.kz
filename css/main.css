@@ -1,0 +1,311 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Roboto&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 14px;
+}
+
+/*Шапка страницы*/
+
+.header {
+    padding-top: 46px;
+    background-color: #F1F1F1;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0px 30px;
+    margin: 0 auto;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 76px;
+
+}
+
+.logo {
+    position: relative;
+    padding: 0 12px 3px 0;
+   
+    
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    color: black;
+    transition: color 0.3s;
+}
+.logo:hover{
+    color: #2E8B57;
+}
+.logo::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #2E8B57;
+    border-radius: 50%;
+
+}
+/* Навигация */
+.nav-list{
+    display:flex ;
+    column-gap: 60px;
+    font-weight: 500;
+    font-size: 15px;
+    
+}
+.nav-button{
+    display: none;
+}
+.nav-link-main{
+    color:#2E8B57;
+}
+.nav-link{
+    color: black;
+    transition: color 0.3s;
+
+}
+.nav-link:hover{
+    color: #2E8B57;
+}
+
+
+
+.nav-link.active{
+    color:#606060;
+}
+
+/* Header content */
+
+.header-content{
+    min-width:500px;
+    margin-top: 124px;
+    color: #2E8B57;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+
+}
+.header-heading{
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 44px;
+}
+.header-content p{
+line-height: 2;
+color: black;
+}
+
+.services{
+    padding: 90px 0;
+    
+}
+
+.services-row{
+display: flex;
+row-gap:60px ;
+column-gap: 30px;
+flex-wrap: wrap;
+}
+
+.services-card{
+flex:  1 1 0;
+min-width: 315px;
+
+
+}
+.services-card-img{
+margin-bottom: 30px;
+}
+.services-card-title{
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size:24px ;
+    text-transform: uppercase;
+}
+.services-card h3{
+    color:black;
+}
+.services-card p{
+    line-height: 2;
+}
+/* Портфолио */
+
+.portfolio{
+    padding: 90px 0;
+    background-color: #F1F1F1;
+
+}
+
+.portfolio-title{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.title-1{
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.project{
+    text-align: center;
+}
+
+.project + .project{
+    margin-top: 90px;
+}
+
+.project-img{
+    margin-bottom: 20px;
+    border-radius: 50px;
+
+}
+
+.project-title{
+    font-size: 18px;
+
+}
+
+.project-title a {
+    color: black;
+    text-decoration: underline;
+}
+/* Footer сайта */
+
+.contacts{
+    padding: 50px 0;
+    text-align: center;
+}
+.contacts-title{
+    margin-bottom: 30px;
+}
+
+.contacts-content{
+    max-width: 480px;
+    font-size: 18px;
+    margin:0 auto 10px;
+
+}
+.contacts-content p + p {
+     margin-top: 1em;
+}
+
+.contacts-button{
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 22px;
+    background-color: black;
+    border-radius: 30px;    
+    font-size: 18px;
+    color: white;
+    transition: background-color 0.3s ease-in, top 0.2s ease-in;
+  }
+  
+  .btn:hover, .btn:focus{
+    background-color: #2E8B57;
+  }
+  
+  .btn:active {
+    position: relative;
+    background-color: black;
+    top: 1px;
+  }
+  /* Стили для кнопки "Отправить" */
+input[type="submit"] {
+    display: inline-block;
+    padding: 7px 22px;
+    border-radius: 30px;    
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease-in, top 0.2s ease-in;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    background-color: #2E8B57;
+  }
+  
+  input[type="submit"]:active {
+    position: relative;
+    background-color: black;
+    top: 1px;
+  }
+.contacts-social{
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contacts-footer{
+    color:#828282 ;
+    
+
+}
+/* Стили для модального окна и затемнения заднего фона */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    width: 400px; /* Ширина модального окна */
+    max-width: 80%; /* Максимальная ширина модального окна */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Граница для каждого поля */
+    border-radius: 10px;
+    max-height: 300px; /* Максимальная высота формы сообщения */
+    resize: vertical; /* Разрешаем изменение высоты, но не ширины */
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+  }
+  
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+  }
